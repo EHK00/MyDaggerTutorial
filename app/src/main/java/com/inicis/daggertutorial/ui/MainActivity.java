@@ -13,6 +13,7 @@ import com.inicis.daggertutorial.R;
 import com.inicis.daggertutorial.databinding.ActivityMainBinding;
 import com.inicis.daggertutorial.temp.BaseActivity;
 import com.inicis.daggertutorial.viewmodel.MainActivityViewModel;
+import com.inicis.daggertutorial.viewmodel.ViewModelFactory;
 
 import javax.inject.Inject;
 
@@ -20,12 +21,8 @@ public class MainActivity extends BaseActivity<MainActivityViewModel> {
 
     private ActivityMainBinding binding;
 
-//    @Inject
-//    MainActivityViewModel viewModel;
-
-//    @Inject
-//    ViewModelProvider.Factory factory;
     @Inject
+    ViewModelFactory factory;
     MainActivityViewModel viewModel;
 
     @Override
@@ -54,7 +51,7 @@ public class MainActivity extends BaseActivity<MainActivityViewModel> {
 
     @Override
     public MainActivityViewModel getViewModel() {
-//        viewModel = ViewModelProviders.of(this, factory).get(MainActivityViewModel.class);
+        viewModel = ViewModelProviders.of(this, factory).get(MainActivityViewModel.class);
 //        viewModel = new MainActivityViewModel();
         return viewModel;
     }

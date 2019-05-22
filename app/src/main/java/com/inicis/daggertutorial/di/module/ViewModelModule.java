@@ -17,15 +17,16 @@ import dagger.multibindings.IntoMap;
 @Module
 public abstract class ViewModelModule {
 
-    @Binds
-    @IntoMap
-    @ViewModelKey(MainActivityViewModel.class)
-    abstract ViewModel bindMainActivityViewModel(MainActivityViewModel mainActivityViewModel);
 
     @Binds
     @IntoMap
     @ViewModelKey(RepoListFragmentViewModel.class)
-    abstract ViewModel bindRepoListFragmentViewModel(RepoListFragmentViewModel repoListFragmentViewModel);
+    abstract ViewModel bindRepoListFragmentViewmodel(RepoListFragmentViewModel viewModel);
+
+    @Binds
+    @IntoMap
+    @ViewModelKey(MainActivityViewModel.class)
+    abstract ViewModel bindMainActivityViewModel(MainActivityViewModel viewModel);
 
     @Binds
     abstract ViewModelProvider.Factory bindViewModelFactory(ViewModelFactory factory);

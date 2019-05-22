@@ -14,6 +14,7 @@ import com.inicis.daggertutorial.R;
 import com.inicis.daggertutorial.databinding.FragmentRepoListBinding;
 import com.inicis.daggertutorial.temp.BaseFragment;
 import com.inicis.daggertutorial.viewmodel.RepoListFragmentViewModel;
+import com.inicis.daggertutorial.viewmodel.ViewModelFactory;
 
 import javax.inject.Inject;
 
@@ -22,8 +23,7 @@ public class RepoListFragment extends BaseFragment<RepoListFragmentViewModel> {
     private FragmentRepoListBinding binding;
 
     @Inject
-    ViewModelProvider.Factory factory;
-
+    ViewModelFactory factory;
 
     @Override
     public RepoListFragmentViewModel getViewModel() {
