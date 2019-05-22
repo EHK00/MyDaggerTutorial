@@ -35,6 +35,9 @@ public class RepoListFragment extends BaseFragment<RepoListFragmentViewModel> {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_repo_list, container, false);
+        binding.setVm(viewModel);
+        binding.setLifecycleOwner(this);
+
         View view = binding.getRoot();
 
         return view;
