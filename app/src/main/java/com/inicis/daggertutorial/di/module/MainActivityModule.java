@@ -22,7 +22,7 @@ import dagger.multibindings.IntoMap;
 @Module
 public abstract class MainActivityModule {
 
-    @ContributesAndroidInjector(modules = RepoListFragmentModule.class)
+    @ContributesAndroidInjector
     abstract RepoListFragment contributeRepoListFragment();
 
 
